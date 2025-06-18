@@ -7,29 +7,19 @@
 </head>
 <body>
 
-<!-- Ввод имени -->
-<div id="name-form-container">
-  <h1>Введите ваше имя:</h1>
-  <input type="text" id="user-name" placeholder="Например: Дима">
-  <button onclick="checkName()">Войти</button>
+<!-- Реклама -->
+<div id="ad-banner" class="hidden">
+  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Аркадий 100 метров от вас желает познакомиться!</a></p>
+  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Моторное масло Хуй Энерджи: стоять будет до расвета!</a></p>
+  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Бесплатные Робуксы! Кликай скорее!</a></p>
 </div>
 
 <!-- Основной тест -->
-<div id="quiz-container" class="hidden">
+<div id="quiz-container">
+  <h1>Тест на Натурала</h1>
   <div id="progress-bar"></div>
-
-  <form id="quiz-form">
-    <div id="question-container"></div>
-    <div class="buttons">
-      <button type="button" onclick="prevQuestion()" id="btn-prev">Назад</button>
-      <button type="button" onclick="nextQuestion()" id="btn-next">Далее</button>
-    </div>
-  </form>
-
-  <div id="result" class="hidden">
-    <h2 id="result-text"></h2>
-    <button onclick="restartQuiz()">Пройти снова</button>
-  </div>
+  <div id="question-container"></div>
+  <button onclick="skipTest()" id="skip-btn" class="hidden">Пропустить тест</button>
 </div>
 
 <script src="script.js"></script>
