@@ -3,24 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Тест на Натурала</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Реклама -->
-<div id="ad-banner" class="hidden">
-  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Аркадий 100 метров от вас желает познакомиться!</a></p>
-  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Моторное масло Хуй Энерджи: стоять будет до расвета!</a></p>
-  <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Бесплатные Робуксы! Кликай скорее!</a></p>
-</div>
-
 <!-- Основной тест -->
 <div id="quiz-container">
-  <h1>Тест на Натурала</h1>
-  <div id="progress-bar"></div>
   <div id="question-container"></div>
-  <button onclick="skipTest()" id="skip-btn" class="hidden">Пропустить тест</button>
+  <button onclick="skipTest()" id="skip-btn">Пропустить тест</button>
 </div>
+
+<!-- Прогрессбар внизу -->
+<div id="progress-bar"><div id="progress"></div></div>
+
+<!-- Реклама (появляется посередине теста) -->
+<div id="ad-banner" class="hidden"></div>
 
 <script src="script.js"></script>
 </body>
