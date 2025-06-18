@@ -55,7 +55,7 @@ body {
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #ff4500;
+  background-color: #9932cc; /* Было оранжевое — стало пурпурное */
   color: white;
   border: none;
   border-radius: 5px;
@@ -68,7 +68,7 @@ body {
 }
 
 #skip-btn:hover {
-  background-color: #cc0000;
+  background-color: #800080;
 }
 
 #progress-bar {
@@ -95,4 +95,22 @@ body {
   background-color: #ffd700;
   border: 2px dashed #ff4500;
   font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Стиль кнопки "Пройти снова" */
+#quiz-container button {
+  background-color: #32cd32;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#quiz-container button:hover {
+  background-color: #228b22;
 }
