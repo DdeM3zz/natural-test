@@ -55,7 +55,7 @@ body {
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #9932cc; /* Было оранжевое — стало пурпурное */
+  background-color: #ff69b4; /* Было оранжевое — стало пурпурное */
   color: white;
   border: none;
   border-radius: 5px;
@@ -100,7 +100,7 @@ body {
 
 /* Стиль кнопки "Пройти снова" */
 #quiz-container button {
-  background-color: #32cd32;
+  background-color: #ff69b4;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
