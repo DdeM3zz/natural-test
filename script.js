@@ -9,22 +9,22 @@ const questions = [
   { question: "8. У вас есть геймпад?", answers: [{text: "Да", value: 1}, {text: "Нет", value: 0}] },
   { question: "9. Вы верите в дружбу между парнем и девушкой?", answers: [{text: "Нет", value: 2}, {text: "Возможно", value: 1}, {text: "Да, конечно", value: 0}] },
   { question: "10. Как часто вы чистите зубы?", answers: [{text: "Каждый день", value: 0}, {text: "Иногда", value: 1}, {text: "Никогда", value: 2}] },
-  
-  // Начиная с 11-го вопроса — добавляем 90 уникальных!
-  { question: "11. Вы натурал?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "12. Вы натурал? Или просто маскируетесь?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "13. Пиво или водка?", answers: [{text: "Пиво", value: 1}, {text: "Водка", value: 0}] },
-  { question: "14. Танки или тетрис?", answers: [{text: "Танки", value: 0}, {text: "Тетрис", value: 2}] },
-  { question: "15. Взрослые пазлы или Lego?", answers: [{text: "Пазлы", value: 1}, {text: "Lego", value: 2}] },
-  { question: "16. Вы любите борщ?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "17. Вы смеётесь над шутками про Шрека?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "18. Мемы про маминого сынулю смешные?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "19. Вы играете в Roblox?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "20. Бесплатные Робуксы были бы полезны?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  
-  // Продолжаем до 100...
-  ...Array.from({ length: 80 }, (_, i) => ({
-    question: `${i + 21}. ${["Мемасик", "Любитель котиков", "Звезда TikTok", "Фанат мемов", "Очень натурал", "Подозревают в обратном", "Любит рикроллы", "Говорит 'че как'"][Math.floor(Math.random() * 8)]}?`,
+
+  // 11–20 новые уникальные вопросы
+  { question: "11. Пиво или водка?", answers: [{text: "Пиво", value: 1}, {text: "Водка", value: 0}] },
+  { question: "12. Танки или тетрис?", answers: [{text: "Танки", value: 0}, {text: "Тетрис", value: 2}] },
+  { question: "13. Взрослые пазлы или Lego?", answers: [{text: "Пазлы", value: 1}, {text: "Lego", value: 2}] },
+  { question: "14. Вы любите борщ?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
+  { question: "15. Вы смеётесь над шутками про Шрека?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
+  { question: "16. Мемы про маминого сынулю смешные?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
+  { question: "17. Вы играете в Roblox?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
+  { question: "18. Бесплатные Робуксы были бы полезны?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
+  { question: "19. Вы знаете, что такое TikTok?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
+  { question: "20. Вы любите музыку из рекламы 2000-х?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
+
+  // 21–120: случайные мемные вопросы
+  ...Array.from({ length: 100 }, (_, i) => ({
+    question: `${i + 21}. ${["Вы натурал?", "Вы мемасик?", "Любите молоко?", "Вы видели рикролл?", "Любите пельмени?", "Смотрите мемы до рассвета?"][Math.floor(Math.random() * 6)]}`,
     answers: [
       { text: "Да", value: Math.floor(Math.random() * 3) },
       { text: "Нет", value: Math.floor(Math.random() * 3) }
@@ -40,7 +40,6 @@ function showQuestion() {
   const container = document.getElementById('question-container');
   const question = questions[currentQuestionIndex];
 
-  // Показываем рекламу один раз после 15 вопроса
   if (!adShown && currentQuestionIndex === 15) {
     showAd();
     adShown = true;
@@ -57,7 +56,6 @@ function showQuestion() {
 
   updateProgress();
 
-  // Показываем кнопку пропуска после 10 вопроса
   const skipBtn = document.getElementById("skip-btn");
   if (currentQuestionIndex >= 10 && !skipBtn.classList.contains("visible")) {
     skipBtn.classList.add("visible");
@@ -120,5 +118,4 @@ function showResult() {
   `;
 }
 
-// Запускаем первый вопрос
 showQuestion();
