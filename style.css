@@ -57,11 +57,28 @@ body {
   transition: width 0.3s ease-in-out;
 }
 
-.hidden {
+#skip-btn {
   display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#skip-btn.visible {
+  display: inline-block;
+}
+
+#skip-btn:hover {
+  background-color: #cc0000;
 }
 
 #ad-banner {
+  display: none;
   margin: 20px auto;
   padding: 15px;
   background-color: #ffd700;
