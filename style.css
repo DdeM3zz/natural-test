@@ -1,12 +1,12 @@
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  background-color: #fff8dc;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #fffacd;
   color: #333;
   text-align: center;
   padding: 20px;
 }
 
-.container, #name-form-container {
+#quiz-container {
   max-width: 600px;
   margin: auto;
   background-color: #ffe4e1;
@@ -15,30 +15,30 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
+#question-container {
+  margin-top: 20px;
+  min-height: 100px;
+}
+
 .question-box {
   margin-bottom: 30px;
 }
 
-button {
-  background-color: #ff69b4;
-  border: none;
-  padding: 10px 20px;
+.answer-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px auto;
   font-size: 18px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px;
 }
 
-button:hover {
+.answer-button:hover {
   background-color: #ff1493;
-}
-
-.hidden {
-  display: none;
-}
-
-input[type="radio"] {
-  margin-right: 10px;
 }
 
 #progress-bar {
@@ -55,4 +55,16 @@ input[type="radio"] {
   width: 0%;
   background-color: #ff69b4;
   transition: width 0.3s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+#ad-banner {
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #ffd700;
+  border: 2px dashed #ff4500;
+  font-weight: bold;
 }
