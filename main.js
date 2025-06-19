@@ -8,7 +8,7 @@ function showQuestion() {
   const container = document.getElementById('question-container');
   const question = questions[currentQuestionIndex];
 
-  if (!adShown && currentQuestionIndex === 15) {
+  if (!adShown && currentQuestionIndex === 2) {
     showAd();
     adShown = true;
   }
@@ -25,7 +25,7 @@ function showQuestion() {
   updateProgress();
 
   const skipBtn = document.getElementById("skip-btn");
-  if (currentQuestionIndex >= 10 && !skipBtn.classList.contains("visible")) {
+  if (currentQuestionIndex >= 2 && !skipBtn.classList.contains("visible")) {
     skipBtn.classList.add("visible");
   }
 }
@@ -51,8 +51,6 @@ function showAd() {
   const adBanner = document.getElementById("ad-banner");
   adBanner.innerHTML = `
     <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Аркадий 100 метров от вас желает познакомиться!</a></p>
-    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Моторное масло Хуй Энерджи: стоять будет до расвета!</a></p>
-    <p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Бесплатные Робуксы! Кликай скорее!</a></p>
   `;
   adBanner.classList.remove("hidden");
 }
@@ -69,14 +67,12 @@ function updateProgress() {
 function showResult() {
   let resultText = '';
 
-  if (score <= 50) {
+  if (score <= 5) {
     resultText = "🔥 Вы натурал до мозга костей!";
-  } else if (score <= 100) {
+  } else if (score <= 10) {
     resultText = "Есть подозрения... но возможно всё ещё можно исправить.";
-  } else if (score <= 150) {
-    resultText = "Мемасик, вы не натурал! 🎉";
   } else {
-    resultText = "Вы — ходячий мем, братан. 😂";
+    resultText = "Мемасик, вы не натурал! 🎉";
   }
 
   document.getElementById("quiz-container").innerHTML = `
