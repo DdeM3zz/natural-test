@@ -96,7 +96,7 @@ body {
   border-radius: 10px;
 }
 .restart-button {
-  background-color: #32cd32;
+  background-color: #cceeff;
   color: white;
   padding: 10px 20px;
   font-size: 16px;
@@ -106,5 +106,5 @@ body {
   transition: background-color 0.3s ease;
 }
 .restart-button:hover {
-  background-color: #228b22;
+  background-color: #87cefa;
 }
