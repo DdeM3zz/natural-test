@@ -1,35 +1,41 @@
 const questions = [
-  { question: "1. Вы любите мужчин?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "2. Ваше имя Дима?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "3. Сколько пальцев у вас?", answers: [{text: "10", value: 2}, {text: "Меньше", value: 1}, {text: "Больше", value: 0}] },
-  { question: "4. Любите котиков?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "5. Вы смотрите аниме?", answers: [{text: "Да, много", value: 2}, {text: "Иногда", value: 1}, {text: "Нет", value: 0}] },
-  { question: "6. Кто такой натурал?", answers: [{text: "Тот, кто любит всех", value: 0}, {text: "Это я", value: 2}, {text: "Не знаю", value: 1}] },
-  { question: "7. Вы когда-нибудь плакали от мемов?", answers: [{text: "Да", value: 2}, {text: "Иногда", value: 1}, {text: "Нет", value: 0}] },
-  { question: "8. У вас есть геймпад?", answers: [{text: "Да", value: 1}, {text: "Нет", value: 0}] },
-  { question: "9. Вы верите в дружбу между парнем и девушкой?", answers: [{text: "Нет", value: 2}, {text: "Возможно", value: 1}, {text: "Да, конечно", value: 0}] },
-  { question: "10. Как часто вы чистите зубы?", answers: [{text: "Каждый день", value: 0}, {text: "Иногда", value: 1}, {text: "Никогда", value: 2}] },
-  { question: "11. Пиво или водка?", answers: [{text: "Пиво", value: 1}, {text: "Водка", value: 0}] },
-  { question: "12. Танки или тетрис?", answers: [{text: "Танки", value: 0}, {text: "Тетрис", value: 2}] },
-  { question: "13. Взрослые пазлы или Lego?", answers: [{text: "Пазлы", value: 1}, {text: "Lego", value: 2}] },
-  { question: "14. Вы любите борщ?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "15. Вы смеётесь над шутками про Шрека?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "16. Мемы про маминого сынулю смешные?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "17. Вы играете в Roblox?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "18. Бесплатные Робуксы были бы полезны?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "19. Вы знаете, что такое TikTok?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "20. Вы любите музыку из рекламы 2000-х?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "21. Вы умеете танцевать?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "22. Вы делаете зарядку каждое утро?", answers: [{text: "Да", value: 0}, {text: "Нет", value: 2}] },
-  { question: "23. Вы любите ходить босиком?", answers: [{text: "Да", value: 1}, {text: "Нет", value: 0}] },
-  { question: "24. Вы смотрите сериалы?", answers: [{text: "Да", value: 1}, {text: "Нет", value: 0}] },
-  { question: "25. Вы верите в инопланетян?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "26. Вы любите делать селфи?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "27. Вы носите шапку даже летом?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "28. Вы следите за модой?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  { question: "29. Вы слушаете попсу?", answers: [{text: "Да", value: 1}, {text: "Нет", value: 0}] },
-  { question: "30. Вы верите в гороскопы?", answers: [{text: "Да", value: 2}, {text: "Нет", value: 0}] },
-  // ... продолжение до 120 вопросов (вставь их из предыдущих ответов)
+  {
+    question: "1. Вы любите мужчин?",
+    answers: [
+      { text: "Да", value: 0 },
+      { text: "Нет", value: 2 }
+    ]
+  },
+  {
+    question: "2. Ваше имя Дима?",
+    answers: [
+      { text: "Да", value: 2 },
+      { text: "Нет", value: 0 }
+    ]
+  },
+  {
+    question: "3. Сколько пальцев у вас?",
+    answers: [
+      { text: "10", value: 2 },
+      { text: "Меньше", value: 1 },
+      { text: "Больше", value: 0 }
+    ]
+  },
+  {
+    question: "4. Любите котиков?",
+    answers: [
+      { text: "Да", value: 0 },
+      { text: "Нет", value: 2 }
+    ]
+  },
+  {
+    question: "5. Вы смотрите аниме?",
+    answers: [
+      { text: "Да, много", value: 2 },
+      { text: "Иногда", value: 1 },
+      { text: "Нет", value: 0 }
+    ]
+  }
 ];
 
 export default questions;
