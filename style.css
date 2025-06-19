@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Comic Sans MS', sans-serif;
-  background-color: #fffacd;
+  background: linear-gradient(135deg, #e0f7ff, #ffffff);
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -18,13 +18,13 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.container {
+#quiz-container {
   max-width: 600px;
   width: 100%;
-  background-color: #ffe4e1;
+  background-color: #ffffffcc;
   border-radius: 10px;
   padding: 30px 20px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
   animation: fadeIn 0.5s ease;
 }
@@ -33,47 +33,6 @@ body {
   display: none;
 }
 
-/* Форма ввода имени */
-#name-form-container {
-  max-width: 400px;
-  width: 100%;
-  background-color: #ffd700;
-  border-radius: 10px;
-  padding: 30px 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  animation: bounceIn 0.6s ease;
-}
-
-#user-name {
-  padding: 10px;
-  width: 80%;
-  font-size: 16px;
-  margin: 10px 0;
-  border: 2px solid #ff69b4;
-  border-radius: 5px;
-}
-
-#user-name:focus {
-  outline: none;
-  border-color: #ff1493;
-}
-
-#name-form-container button {
-  background-color: #ff69b4;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#name-form-container button:hover {
-  background-color: #ff1493;
-}
-
-/* Вопросы */
 .question-box {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -85,7 +44,7 @@ body {
   padding: 12px;
   margin: 10px auto;
   font-size: 18px;
-  background-color: #ff69b4;
+  background-color: #87cefa;
   color: white;
   border: none;
   border-radius: 5px;
@@ -94,16 +53,15 @@ body {
 }
 
 .answer-button:hover {
-  background-color: #ff1493;
+  background-color: #4682b4;
 }
 
-/* Кнопка пропуска */
 #skip-btn {
   display: none;
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 16px;
-  background-color: #9932cc;
+  background-color: #4682b4;
   color: white;
   border: none;
   border-radius: 5px;
@@ -116,40 +74,37 @@ body {
 }
 
 #skip-btn:hover {
-  background-color: #800080;
+  background-color: #36648b;
 }
 
-/* Прогрессбар */
 #progress-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 20px;
-  background-color: #eee;
+  background-color: #cceeff;
   z-index: 1000;
 }
 
 #progress {
   height: 100%;
   width: 0%;
-  background-color: #ff69b4;
+  background-color: #87cefa;
   transition: width 0.3s ease-in-out;
 }
 
-/* Реклама */
 #ad-banner {
   display: none;
   margin: 20px auto;
   padding: 15px;
-  background-color: #ffd700;
-  border: 2px dashed #ff4500;
+  background-color: #e6f2ff;
+  border: 2px dashed #87cefa;
   font-weight: bold;
   border-radius: 10px;
   animation: pulse 2s infinite;
 }
 
-/* Кнопка "Пройти снова" */
 #quiz-container button {
   background-color: #32cd32;
   color: white;
@@ -166,20 +121,12 @@ body {
   background-color: #228b22;
 }
 
-/* Анимации */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes bounceIn {
-  0% { transform: scale(0.6); opacity: 0; }
-  50% { transform: scale(1.05); }
-  70% { transform: scale(0.9); }
-  100% { transform: scale(1); opacity: 1; }
-}
-
 @keyframes pulse {
-  0%, 100% { background-color: #ffd700; }
-  50% { background-color: #ffec8b; }
+  0%, 100% { background-color: #e6f2ff; }
+  50% { background-color: #d0eaff; }
 }
