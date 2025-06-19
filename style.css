@@ -15,7 +15,6 @@ body {
   justify-content: center;
   padding: 40px 20px;
   text-align: center;
-  transition: background-color 0.5s ease;
 }
 
 #quiz-container {
@@ -26,7 +25,6 @@ body {
   padding: 30px 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  animation: fadeIn 0.5s ease;
 }
 
 .hidden {
@@ -49,7 +47,6 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .answer-button:hover {
@@ -66,15 +63,10 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 #skip-btn.visible {
   display: inline-block;
-}
-
-#skip-btn:hover {
-  background-color: #36648b;
 }
 
 #progress-bar {
@@ -102,31 +94,4 @@ body {
   border: 2px dashed #87cefa;
   font-weight: bold;
   border-radius: 10px;
-  animation: pulse 2s infinite;
-}
-
-#quiz-container button {
-  background-color: #32cd32;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-#quiz-container button:hover {
-  background-color: #228b22;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes pulse {
-  0%, 100% { background-color: #e6f2ff; }
-  50% { background-color: #d0eaff; }
 }
