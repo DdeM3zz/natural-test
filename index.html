@@ -8,15 +8,8 @@
 </head>
 <body>
 
-<!-- Форма ввода имени -->
-<div id="name-form-container">
-  <h1>Введите ваше имя:</h1>
-  <input type="text" id="user-name" placeholder="Например: Дима">
-  <button onclick="checkName()">Войти</button>
-</div>
-
 <!-- Основной тест -->
-<div id="quiz-container" class="hidden">
+<div id="quiz-container">
   <div id="question-container"></div>
   <button onclick="skipTest()" id="skip-btn">Пропустить тест</button>
 </div>
@@ -27,6 +20,7 @@
 <!-- Реклама -->
 <div id="ad-banner" class="hidden"></div>
 
-<script src="script.js"></script>
+<script src="questions.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
